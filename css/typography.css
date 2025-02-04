@@ -1,0 +1,109 @@
+/* Web fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Base Typography
+------------------------------------------------------------------------------*/
+body {
+  color: #000;
+  font-size: 1.125rem;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  body {
+      height: 100%;
+  }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  line-height: 1.2;
+  font-family: inherit;
+  font-weight: 700;
+}
+.h1, h1 {
+  font-size: 6.25rem;
+  margin-bottom: 1.25rem;
+}
+.h2, h2 {
+  font-size: 4rem;
+  margin-bottom: 1.25rem;
+}
+.h3, h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.0625rem;
+}
+.h4, h4 {
+  font-size: 2rem;
+  margin-bottom: 1.0625rem;
+}
+.h5, h5 {
+  font-size: 1.75rem;
+  margin-bottom: .9375rem;
+}
+.h6, h6 {
+  font-size: 1.5625rem;
+  margin-bottom: .9375rem;
+}
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+ul {
+  padding-left: 1.25rem;
+}
+ul li {
+  padding-bottom: .625rem;
+}
+ul li:last-child {
+  padding-bottom: 0;
+}
+.main-content ul, .main-content ol {
+  padding-bottom: .9375rem;
+}
+.main-content ul ul, .main-content ul ol, .main-content ol ol, .main-content ol ul {
+  padding-top: .625rem;
+  padding-bottom: 0;
+}
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+img[src$=".svg"] {
+  display: inline-block;
+  vertical-align: top;
+}
+/* Link
+------------------------------------------------------------------------------*/
+a {
+  color: #000;
+  transition: 0.3s;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+input, textarea {
+  font-weight: 600 !important;
+}
+input::placeholder, textarea::placeholder {
+    color: #909090 !important;
+}
