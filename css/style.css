@@ -228,6 +228,8 @@ a.inquiry-btn:hover, a.inquiry-btn:focus, .next-section-btn button:hover, .next-
 }
 .tab-block-img img {
   height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 .tab-block:hover .tab-block-img, .tab-block.active .tab-block-img {
   border-color: var(--primary-color);
