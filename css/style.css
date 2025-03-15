@@ -55,21 +55,11 @@
 }
 .fp-viewing-0 .main-header {
   transform: translateY(0);
-  transition-delay: 0.45s;
+  transition-delay: 0.5s;
 }
 #fullpage {
   z-index: 1;
   background-color: var(--white-color);
-}
-#section0, #section1 {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: 2s;
-  transition-delay: 1s;
-}
-.fp-enabled #section0, .fp-enabled #section1 {
-  transform: scale(1);
-  opacity: 1;
 }
 .fp-watermark {
   display: none;
@@ -146,7 +136,7 @@ a.inquiry-btn:hover, a.inquiry-btn:focus, .next-section-btn button:hover, .next-
   width: 100%;
   background-color: var(--white-color);
   transform: translateY(-100%);
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .main-header .contact-link {
   font-size: 1.625rem;
@@ -490,4 +480,58 @@ a.inquiry-btn:hover, a.inquiry-btn:focus, .next-section-btn button:hover, .next-
 }
 .footer-bottom-row.owl-carousel .owl-nav .owl-prev {
   right: 0;
+}
+
+
+/* animations */
+body, .anime-fade-zoom {
+  opacity: 0;
+  transition: 0.3s;
+}
+.fp-enabled body {
+  opacity: 1;
+}
+.fp-completely.anime-fade-zoom {
+  opacity: 1;
+  transition: 1s;
+  transition-delay: 1s;
+  animation-name: animeFadeZoom;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+[class*='animate-'] {
+  opacity: 0;
+}
+.fp-completely [class*='animate-'] {
+  opacity: 1;
+  transition: 1s;
+}
+.fp-completely .animate-fade-top {
+  animation-name: fadeTop;
+  animation-duration: 1s;
+}
+.fp-completely .animate-fade-bottom {
+  animation-name: fadeBottom;
+  animation-duration: 1s;
+}
+.fp-completely .animate-zoom-rotate {
+  animation-name: zoomRotate;
+  animation-duration: 1s;
+}
+
+@keyframes animeFadeZoom {
+  from {transform: scale(0.8);}
+  to {transform: scale(1); }
+}
+@keyframes fadeTop {
+  from {transform: translateY(-100%);}
+  to {transform: translateY(0);}
+}
+@keyframes fadeBottom {
+  from {transform: translateY(100%);}
+  to {transform: translateY(0);}
+}
+@keyframes zoomRotate {
+  from {transform: scale(0) rotate(-160deg);}
+  to {transform: scale(1) rotate(0);}
 }
